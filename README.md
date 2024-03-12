@@ -70,3 +70,26 @@ function RootLayout() {
     </>
   );
 }
+
+```
+
+### ErrorElement in Route
+
+#### `App.jsx`
+
+```jsx
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement:<Error/>,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/products", element: < Products /> }
+
+    ]
+
+  },
+
+]);
+```
