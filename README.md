@@ -21,3 +21,19 @@ or
 npm install react-router-dom
 
 ```
+### Route Sample
+
+```
+const routrDefnitions = createRoutesFromElements(
+  <Route>
+    <Route path='/' element={<HomePage/>}/>
+    <Route path='/products' element={<HomePage/>}/>
+  </Route>
+)
+const router = createBrowserRouter(routrDefnitions);
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+```
