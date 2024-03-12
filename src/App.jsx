@@ -1,6 +1,6 @@
 
 import './App.css'
-import { createBrowserRouter, RouterProvider, createRoutesFromElements } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./component/HomePage";
 import Products from "./component/Products";
  const router = createBrowserRouter([
