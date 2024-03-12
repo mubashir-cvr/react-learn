@@ -93,3 +93,9 @@ const router = createBrowserRouter([
 
 ]);
 ```
+
+### Link Element
+
+```jsx
+    <Link to="/">Home</Link>
+```
