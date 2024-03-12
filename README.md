@@ -41,7 +41,7 @@ function App() {
 ### Root Layout 
 #### Common Lay out (Navigation bar Purpose)
 
-# `App.jsx`
+#### `App.jsx`
 
 ```jsx
 const router = createBrowserRouter([
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
 ]);
 ```
 
-# `RootLayout.jsx`
+#### `RootLayout.jsx`
 
 ```jsx
 function RootLayout() {
