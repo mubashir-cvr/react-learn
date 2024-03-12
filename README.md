@@ -99,3 +99,14 @@ const router = createBrowserRouter([
 ```jsx
     <Link to="/">Home</Link>
 ```
+
+### NavLink 
+
+```jsx
+  <NavLink to="/" className={({isActive})=> isActive? 'active':undefined} end>Home</NavLink>
+  // isActive will hold  true or false based on click 
+  // end mentioned here since we have nested rout for '/'
+  <NavLink to="/products" className={({isActive})=> isActive? 'active': undefined}>Products</NavLink>
+
+
+```
