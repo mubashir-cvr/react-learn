@@ -13,3 +13,11 @@ Currently, two official plugins are available:
 npm create vite@latest
 ```
 
+## Router
+
+```
+npm i react-router-dom  
+or
+npm install react-router-dom
+
+```
