@@ -110,3 +110,16 @@ const router = createBrowserRouter([
 
 
 ```
+
+
+
+### Link to = ".." 
+
+```jsx
+   <Link to=".." >Back</Link>
+   <Link to=".." relative="path" >Back</Link>
+   //First one will back to the route (Home Page)
+   //Second one will just remove current route to very previous [age]
+
+
+```
