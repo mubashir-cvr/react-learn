@@ -37,3 +37,36 @@ function App() {
 }
 
 ```
+
+### Root Layout 
+#### Common Lay out (Navigation bar Purpose)
+
+# `App.jsx`
+
+```jsx
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/products", element: < Products /> }
+
+    ]
+
+  },
+
+]);
+```
+
+# `RootLayout.jsx`
+
+```jsx
+function RootLayout() {
+  return (
+    <>
+      <h4>RootLayout <i>(Add navigation here)</i></h4>
+      <Outlet />
+    </>
+  );
+}
