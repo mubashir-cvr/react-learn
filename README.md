@@ -123,3 +123,70 @@ const router = createBrowserRouter([
 
 
 ```
+
+### Loader 
+
+#### `App.jsx`
+```jsx
+import Products,{loader as prodectLoader} from "./component/Products";
+.....
+.....
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement:<Error/>,
+    children: [
+      { index:true, element: <HomePage /> },
+      {
+        path: "products",
+        element: <ProductRootLayout />,
+        children: [
+          { index:true, element: <Products /> ,loader:prodectLoader},
+          { path: ":productID", element: <ProductDetails /> },
+          { path: ":productID/edit", element: <EditProduct /> },
+          { path: "new", element: <NewProduct /> },
+        ],
+      },
+    ],
+  },
+]);
+
+```
+
+#### `Products.jsx`
+```jsx
+
+
+import { Link,useLoaderData } from "react-router-dom";
+function Products() {
+  const data = useLoaderData();
+  return (
+    <>
+      <h1>Products</h1>
+      <ul>
+      {data.map(product)=>{
+         <li><Link to="{product.id}">{product.name}</Link></li>
+      }}
+      </ul>
+    </>
+  );
+}
+
+export default Products;
+
+export  async function loader() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {id: 1, name: "Product1"},
+        {id: 2, name: "Product2"},
+        {id: 3, name: "Product3"},
+        {id: 4, name: "Product4"},
+      ]);
+    }, 3000);
+  });
+}
+
+```
